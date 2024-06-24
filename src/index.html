@@ -29,22 +29,33 @@
           name="inputText"
           id="inputText"
           placeholder="Digite seu texto"
+          rows="10"
           class="w-full flex-1 resize-none appearance-none bg-purple-100 p-4 text-3xl font-semibold text-purple-700 placeholder:text-3xl placeholder:font-semibold placeholder:text-purple-700 focus:outline-purple-700"
         ></textarea>
+        <div class="flex items-center justify-center gap-3">
+          <img
+            src="./public/info.svg"
+            alt="ícone de informação"
+            class="m-0 size-5"
+          />
+          <p class="m-0 text-purple-950">
+            Apenas letras minúsculas e sem acento.
+          </p>
+        </div>
         <div
-          class="xs:flex-row flex flex-col items-center justify-center gap-4"
+          class="flex flex-col items-center justify-center gap-4 xs:flex-row"
         >
           <button
             id="encrypt"
             type="submit"
-            class="xs:max-w-[312px] w-full rounded-md border border-purple-700 bg-purple-500 p-4 text-white"
+            class="w-full rounded-md border border-purple-700 bg-purple-500 p-4 text-white xs:max-w-[312px]"
           >
             Criptografar
           </button>
           <button
             id="decrypt"
             type="submit"
-            class="xs:max-w-[312px] w-full rounded-md border border-purple-700 bg-purple-50 p-4 text-purple-700"
+            class="w-full rounded-md border border-purple-700 bg-purple-50 p-4 text-purple-700 xs:max-w-[312px]"
           >
             Descriptografar
           </button>
@@ -76,5 +87,6 @@
         >
       </p>
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>
