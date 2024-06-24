@@ -16,77 +16,103 @@
   <body
     class="prose flex min-h-screen min-w-full flex-col gap-6 bg-purple-100 p-2 antialiased md:p-4 lg:p-8"
   >
+    <!-- Cabeçalho -->
     <header class="flex h-14 items-center justify-center bg-purple-100">
       <img
         src="./public/logo.svg"
-        alt="logo allura com a letra a"
+        alt="Logo Allura com a letra A"
         class="m-0 size-12"
       />
     </header>
-    <di class="flex flex-1 flex-col gap-10 md:flex-row lg:gap-20">
-      <main class="flex w-full flex-1 flex-col gap-4">
+
+    <!-- Conteúdo Principal -->
+    <div class="flex flex-1 flex-col gap-10 md:flex-row lg:gap-20">
+      <form class="flex w-full flex-1 flex-col gap-4">
+        <!-- Área de Texto de Entrada -->
         <textarea
-          name="inputText"
           id="inputText"
           placeholder="Digite seu texto"
           rows="10"
           class="w-full flex-1 resize-none appearance-none bg-purple-100 p-4 text-3xl font-semibold text-purple-700 placeholder:text-3xl placeholder:font-semibold placeholder:text-purple-700 focus:outline-purple-700"
         ></textarea>
+
+        <!-- Informação sobre as regras -->
         <div class="flex items-center justify-center gap-3">
           <img
             src="./public/info.svg"
-            alt="ícone de informação"
+            alt="Ícone de informação"
             class="m-0 size-5"
           />
           <p class="m-0 text-purple-950">
             Apenas letras minúsculas e sem acento.
           </p>
         </div>
+
+        <!-- Botões de Criptografar e Descriptografar -->
         <div
           class="flex flex-col items-center justify-center gap-4 xs:flex-row"
         >
           <button
-            id="encrypt"
+            id="encryptButton"
             type="submit"
-            class="w-full rounded-md border border-purple-700 bg-purple-500 p-4 text-white xs:max-w-[312px]"
+            class="w-full rounded-md border border-purple-700 bg-purple-500 p-4 text-white duration-300 hover:bg-purple-800 hover:transition-all hover:ease-in-out xs:max-w-[312px]"
           >
             Criptografar
           </button>
           <button
-            id="decrypt"
+            id="decryptButton"
             type="submit"
-            class="w-full rounded-md border border-purple-700 bg-purple-50 p-4 text-purple-700 xs:max-w-[312px]"
+            class="w-full rounded-md border border-purple-700 bg-purple-100 p-4 text-purple-700 duration-300 hover:bg-purple-50 hover:transition-all hover:ease-in-out xs:max-w-[312px]"
           >
             Descriptografar
           </button>
         </div>
-      </main>
+      </form>
+
+      <!-- Painel Lateral -->
       <aside
-        class="flex w-full flex-1 flex-col items-center justify-center gap-4 rounded-md border border-purple-700 bg-purple-50 p-8 text-center shadow-md md:max-w-sm"
+        id="resultPanel"
+        class="flex w-full flex-1 flex-col justify-between gap-4 break-all rounded-md border border-purple-700 bg-purple-50 p-8 shadow-md md:max-w-sm"
       >
         <img
           src="./public/message-empty.svg"
-          alt="duas pranchetas"
+          alt="Ícone de duas pranchetas"
           class="hidden size-80 md:block"
         />
-        <div class="space-y-2 p-2">
-          <h2 class="m-0 text-purple-800">Nenhuma mensagem encontrada</h2>
-          <p class="m-0 text-purple-500">
+        <div class="space-y-2 p-2 text-center">
+          <h2 id="messageTitle" class="m-0 text-purple-800">
+            Nenhuma mensagem encontrada
+          </h2>
+          <p id="messageDescription" class="m-0 text-purple-500">
             Digite um texto que você deseja criptografar ou descriptografar.
           </p>
         </div>
+        <span
+          id="outputText"
+          class="w-full text-wrap text-start text-2xl text-purple-500"
+        ></span>
+        <button
+          id="copyButton"
+          class="hidden w-full rounded-md border border-purple-700 bg-purple-100 p-4 text-purple-700 duration-300 hover:bg-purple-50 hover:transition-all hover:ease-in-out"
+        >
+          Copiar
+        </button>
       </aside>
-    </di>
+    </div>
+
+    <!-- Rodapé -->
     <footer
       class="flex h-20 w-full items-center justify-center rounded-md border border-purple-700 bg-purple-50"
     >
       <p class="m-0 p-4 text-center text-purple-700">
         © 2024 Copyright by
-        <a href="https://tw-elements.com/" class="text-purple-950"
+        <a href="https://github.com/Barcaca" class="text-purple-950"
           >Luan Barcaça</a
         >
       </p>
     </footer>
+
+    <!-- Script -->
     <script src="./script.js"></script>
   </body>
 </html>
