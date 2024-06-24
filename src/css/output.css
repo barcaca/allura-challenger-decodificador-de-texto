@@ -1056,8 +1056,16 @@ video {
   margin-bottom: 0;
 }
 
+.m-0 {
+  margin: 0px;
+}
+
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
 }
 
 .size-12 {
@@ -1065,21 +1073,21 @@ video {
   height: 3rem;
 }
 
-.size-1 {
-  width: 0.25rem;
-  height: 0.25rem;
+.size-80 {
+  width: 20rem;
+  height: 20rem;
 }
 
-.h-full {
-  height: 100%;
+.h-14 {
+  height: 3.5rem;
+}
+
+.h-20 {
+  height: 5rem;
 }
 
 .min-h-screen {
   min-height: 100vh;
-}
-
-.min-h-full {
-  min-height: 100%;
 }
 
 .w-full {
@@ -1094,12 +1102,44 @@ video {
   flex: 1 1 0%;
 }
 
+.resize-none {
+  resize: none;
+}
+
+.appearance-none {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
 .flex-col {
   flex-direction: column;
 }
 
-.justify-between {
-  justify-content: space-between;
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-10 {
+  gap: 2.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
 .rounded-md {
@@ -1110,9 +1150,9 @@ video {
   border-width: 1px;
 }
 
-.border-purple-800 {
+.border-purple-700 {
   --tw-border-opacity: 1;
-  border-color: rgb(107 33 168 / var(--tw-border-opacity));
+  border-color: rgb(126 34 206 / var(--tw-border-opacity));
 }
 
 .bg-purple-100 {
@@ -1125,20 +1165,39 @@ video {
   background-color: rgb(250 245 255 / var(--tw-bg-opacity));
 }
 
-.bg-purple-950\/5 {
-  background-color: rgb(59 7 100 / 0.05);
+.bg-purple-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(168 85 247 / var(--tw-bg-opacity));
 }
 
-.fill-purple-700 {
-  fill: #7e22ce;
+.p-2 {
+  padding: 0.5rem;
 }
 
 .p-4 {
   padding: 1rem;
 }
 
+.p-8 {
+  padding: 2rem;
+}
+
 .text-center {
   text-align: center;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-purple-500 {
+  --tw-text-opacity: 1;
+  color: rgb(168 85 247 / var(--tw-text-opacity));
 }
 
 .text-purple-700 {
@@ -1151,29 +1210,97 @@ video {
   color: rgb(107 33 168 / var(--tw-text-opacity));
 }
 
+.text-purple-950 {
+  --tw-text-opacity: 1;
+  color: rgb(59 7 100 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.shadow {
-  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+.shadow-md {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+html{
+  font-family: "Poppins", sans-serif;
+}
+
+.placeholder\:text-3xl::-moz-placeholder {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.placeholder\:text-3xl::placeholder {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.placeholder\:font-semibold::-moz-placeholder {
+  font-weight: 600;
+}
+
+.placeholder\:font-semibold::placeholder {
+  font-weight: 600;
+}
+
+.placeholder\:text-purple-700::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(126 34 206 / var(--tw-text-opacity));
+}
+
+.placeholder\:text-purple-700::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(126 34 206 / var(--tw-text-opacity));
+}
+
+.focus\:outline-purple-700:focus {
+  outline-color: #7e22ce;
+}
+
+@media (min-width: 475px) {
+  .xs\:max-w-\[312px\] {
+    max-width: 312px;
+  }
+
+  .xs\:flex-row {
+    flex-direction: row;
+  }
+}
+
 @media (min-width: 768px) {
-  .md\:p-6 {
-    padding: 1.5rem;
+  .md\:block {
+    display: block;
+  }
+
+  .md\:max-w-sm {
+    max-width: 24rem;
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:p-4 {
+    padding: 1rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .lg\:p-10 {
-    padding: 2.5rem;
+  .lg\:gap-20 {
+    gap: 5rem;
   }
 
-  .lg\:text-left {
-    text-align: left;
+  .lg\:p-8 {
+    padding: 2rem;
   }
 }
