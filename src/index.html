@@ -26,7 +26,7 @@
     </header>
 
     <!-- Conteúdo Principal -->
-    <div class="flex flex-1 flex-col gap-10 md:flex-row lg:gap-20">
+    <div class="flex flex-1 flex-col gap-10 md:h-full md:flex-row lg:gap-20">
       <form class="flex w-full flex-1 flex-col gap-4">
         <!-- Área de Texto de Entrada -->
         <textarea
@@ -72,16 +72,16 @@
       <!-- Painel Lateral -->
       <aside
         id="resultPanel"
-        class="flex w-full flex-1 flex-col justify-between gap-4 break-all rounded-md border border-purple-700 bg-purple-50 p-8 shadow-md md:max-w-sm"
+        class="flex w-full flex-1 flex-col items-center justify-between gap-3 break-all rounded-md border border-purple-700 bg-purple-50 p-6 shadow-md md:max-w-sm"
       >
         <img
           src="./public/message-empty.svg"
           alt="Ícone de duas pranchetas"
-          class="hidden size-80 md:block"
+          class="hidden size-56 md:block"
         />
         <div class="space-y-2 p-2 text-center">
           <h2 id="messageTitle" class="m-0 text-purple-800">
-            Nenhuma mensagem encontrada
+            Nenhuma mensagem <br />encontrada
           </h2>
           <p id="messageDescription" class="m-0 text-purple-500">
             Digite um texto que você deseja criptografar ou descriptografar.
